@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: aqua;
+}
+.Navigation {
+  width: 50%;
+  margin: 2% auto 0;
+  padding: 30px;
+}
+.Navigation__list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.Navigation__link,
+.Navigation__link:link,
+.Navigation__link:visited {
+  color: black;
+  text-decoration: none;
+  background-color: rgb(233, 229, 229);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 10px 40px;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.Navigation__link:active,
+.Navigation__link:hover {
+  transform: scale(1.2);
+}
+.Note {
+  text-align: center;
+  padding: 10px 100px;
+  width: 70%;
+  margin: 0 auto;
+}
+.Note__title {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.Note__paragraph {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.Tab-pane {
+  display: none;
+}
+.active {
+  display: block;
+}
+@media screen and (max-width: 600px) {
+  .Navigation {
+    width: 100%;
+    margin: 0;
+  }
+  .Navigation__item:not(:first-child) {
+    margin-left: 8px;
+  }
+  .Note {
+    padding: 10px;
+  }
+  .Navigation__link,
+  .Navigation__link:link,
+  .Navigation__link:visited {
+    padding: 10px 30px;
+  }
+  .Navigation__link:active,
+  .Navigation__link:hover {
+    transform: scale(1.1);
+  }
+}
